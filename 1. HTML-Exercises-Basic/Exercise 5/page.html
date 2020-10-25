@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page</title>
+</head>
+
+<body>
+    <form action="/register" method="post">
+        <fieldset>
+            <legend>User information</legend>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Personal information</legend>
+            <label for="firstName">First name:</label>
+            <br>
+            <input type="text" id="firstName" name="firstName">
+            <br>
+            <label for="lastName">Last name:</label>
+            <br>
+            <input type="text" id="lastName" name="lastName">
+            <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br>
+            <label for="favoriteFood">Favorite Food</label>
+            <select id="favoriteFood" name="favoriteFoodList">
+                <option>Chocolate</option>
+                <option>Another option</option>
+                <option>Yet another option</option>
+            </select>
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+</body>
