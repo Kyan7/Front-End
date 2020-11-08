@@ -1,0 +1,23 @@
+#container1 {
+    padding: 5px;
+    margin: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5b4000;
+    width: 400;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+#container2 {
+    padding: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #0e5252;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+#sandbox {
+    height: max-content;
+}
