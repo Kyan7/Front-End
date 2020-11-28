@@ -160,6 +160,7 @@ nav form button {
 
 .profile-stats {
     display: flex;
+    margin-top: 10px;
 }
 
 .profile-stats div {
@@ -218,8 +219,8 @@ nav form button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
     border-bottom: 2px rgb(239, 239, 239) solid;
 }
 
@@ -273,16 +274,18 @@ nav form button {
 .post {
     height: 3rem;
     background-color: white;
+    color: rgb(149, 151, 162);
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     min-height: 7rem;
     font-size: 0.7rem;
+    position: relative;
 }
 
 .post:not(:last-of-type) {
@@ -303,13 +306,12 @@ nav form button {
     width: 100%;
     display: flex;
     text-align: left;
-    color: rgb(149, 151, 162);
     flex-flow: column;
 }
 
 .post-content-wrapper span:first {
     flex: 1;
-    flex-direction: row;
+    flex-flow: row;
 }
 
 .poster-name {
@@ -318,6 +320,7 @@ nav form button {
     color: black;
     margin-right: 3px;
     font-size: 1rem;
+    display: inline;
 }
 
 .post-description {
@@ -328,8 +331,15 @@ nav form button {
 .likes-dislikes-section {
     display: flex;
     flex-direction: row;
+    color: black;
 }
 
 .likes-dislikes-section section {
     margin-right: 10px;
+}
+
+.post>i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
