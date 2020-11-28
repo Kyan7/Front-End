@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flutter</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="https://kit.fontawesome.com/aca1d4745b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="./home.html">
+            <h1>Flutter</h1>
+        </a>
+        <form action="/search">
+            <input type="text" id="search" placeholder="Search">
+            <button type="submit"><i class="fas fa-search"></i></input></button>
+        </form>
+    </nav>
+    <div class="main">
+        <aside class="profile">
+            <img class="profile-pic-large" src="./img/img_avatar.png">
+            <h3>Martin Hristov</h3>
+
+            <section class="profile-stats-and-logout-section">
+                <span class="profile-stats">
+                    <div>
+                        <h4 class="profile-stat-header">Posts</h4>
+                        <p class="profile-stat">1</p>
+                    </div>
+                    <div>
+                        <h4 class="profile-stat-header">Reactions</h4>
+                        <p class="profile-stat">7</p>
+                    </div>
+                </span>
+                <form class="logout-form" action="/logout">
+                    <button class="logout-button">Logout</button>
+                </form>
+            </section>
+        </aside>
+        <section class="feed">
+            <section class="add-post-section">
+                <form action="/add-post">
+                    <input type="text" id="content" placeholder="Say something">
+                    <button type="submit"><i class="far fa-comment-alt-lines"></i></button>
+                </form>
+            </section>
+            <section class="post">
+
+            </section>
+            <section class="post">
+
+            </section>
+        </section>
+    </div>
+</body>

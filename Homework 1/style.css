@@ -5,12 +5,14 @@
 html,
 body {
     height: 90%;
+    overflow-x: hidden;
 }
 
 body {
     font-size: 16px;
     background: linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
     position: relative;
+    margin: 0;
 }
 
 h1,
@@ -18,11 +20,15 @@ h2 {
     font-weight: normal;
 }
 
+h1 {
+    font-size: 2em !important;
+}
+
 h2 {
     color: #848694;
 }
 
-form {
+.central-form {
     max-width: 32rem;
     width: 90%;
     background-color: white;
@@ -36,7 +42,7 @@ form {
     transform: translateY(-50%) translateX(-50%);
 }
 
-input {
+.central-form-field {
     outline: none;
     width: 100%;
     display: inline-block;
@@ -48,7 +54,7 @@ input {
     background: transparent;
 }
 
-input:focus {
+.central-form-field:focus {
     border-bottom: 2px solid rgb(74, 95, 216);
 }
 
@@ -58,7 +64,7 @@ input:focus {
     float: right;
 }
 
-button {
+.form-button {
     max-width: 10rem;
     width: 200px;
     padding: 10px;
@@ -73,4 +79,164 @@ button {
 
 a {
     text-decoration: none;
+}
+
+nav {
+    background-color: white;
+    height: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+nav form {
+    border-radius: 25px;
+    background-color: rgb(246, 247, 253);
+    padding: 8px 15px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav form input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+nav form button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.main {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    min-width: 50%;
+    max-width: 75rem;
+}
+
+.profile {
+    float: left;
+    max-width: 18rem;
+    min-width: 33%;
+    background-color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.profile-pic-large {
+    border-radius: 50%;
+    width: 5.25rem;
+    height: 5.25rem;
+}
+
+.profile-stats-and-logout-section {
+    display: flex;
+    background-color: rgb(246, 247, 253);
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+.profile-stats {
+    display: flex;
+}
+
+.profile-stats div {
+    text-align: left;
+}
+
+.profile-stats div:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.profile-stat-header {
+    font-weight: bold;
+    color: rgb(134, 136, 149);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.profile-stat {
+    color: rgb(87, 190, 215);
+    font-size: 1.125rem;
+    margin-top: 2px;
+}
+
+.logout-form,
+.profile-stats {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    max-width: 10rem;
+    width: 200px;
+    padding: 10px;
+    background-color: transparent;
+    color: rgb(84, 189, 219);
+    border-radius: 25px;
+    border: 2px rgb(84, 189, 219) solid;
+    display: block;
+}
+
+.feed {
+    float: right;
+    max-width: 18rem;
+    min-width: 66%;
+    background-color: white;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.add-post-section {
+    height: 3rem;
+    background-color: rgb(246, 247, 253);
+}
+
+.add-post-section form {
+    border-radius: 25px;
+    background-color: white;
+    color: rgb(84, 189, 219);
+    padding: 8px 15px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-post-section form input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.add-post-section form button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
