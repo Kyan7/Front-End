@@ -205,13 +205,22 @@ nav form button {
     max-width: 18rem;
     min-width: 66%;
     background-color: white;
-    padding-top: 10px;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
 }
 
 .add-post-section {
     height: 3rem;
     background-color: rgb(246, 247, 253);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-bottom: 2px rgb(239, 239, 239) solid;
 }
 
 .add-post-section form {
@@ -219,12 +228,23 @@ nav form button {
     background-color: white;
     color: rgb(84, 189, 219);
     padding: 8px 15px;
-    margin-top: 8px;
+    margin: 0.4rem;
     font-size: 17px;
-    border: none;
-    width: 300px;
+    border: 1px rgb(84, 189, 219) solid;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    vertical-align: middle;
+}
+
+.profile-pic-small {
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.add-post-section .profile-pic-small {
+    vertical-align: middle;
 }
 
 .add-post-section form input {
@@ -234,9 +254,82 @@ nav form button {
     outline: none;
 }
 
+.add-post-section form input::placeholder {
+    color: rgb(84, 189, 219);
+}
+
+.add-post-section form input::-ms-input-placeholder {
+    color: rgb(84, 189, 219);
+}
+
 .add-post-section form button {
+    color: rgb(84, 189, 219);
     background-color: transparent;
     border: none;
     box-shadow: none;
     outline: none;
+}
+
+.post {
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    min-height: 7rem;
+    font-size: 0.7rem;
+}
+
+.post:not(:last-of-type) {
+    border-bottom: 2px rgb(239, 239, 239) solid;
+}
+
+.profile-pic-med {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.profile-pic-wrapper {
+    margin-right: 10px;
+}
+
+.post-content-wrapper {
+    width: 100%;
+    display: flex;
+    text-align: left;
+    color: rgb(149, 151, 162);
+    flex-flow: column;
+}
+
+.post-content-wrapper span:first {
+    flex: 1;
+    flex-direction: row;
+}
+
+.poster-name {
+    margin: 0;
+    font-weight: bold;
+    color: black;
+    margin-right: 3px;
+    font-size: 1rem;
+}
+
+.post-description {
+    color: black;
+    font-size: 0.875rem;
+}
+
+.likes-dislikes-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.likes-dislikes-section section {
+    margin-right: 10px;
 }
