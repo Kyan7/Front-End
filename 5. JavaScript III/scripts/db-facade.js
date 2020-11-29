@@ -58,7 +58,6 @@
      *
      **/
     const register = (username, email, password, callback) => {
-        alert("yo");
         firebase.auth().createUserWithEmailAndPassword(email, password).then((data) => {
             data.user.updateProfile({
                 displayName: username

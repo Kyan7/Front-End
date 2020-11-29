@@ -21,7 +21,7 @@ function validateRegister() {
         username = document.forms[0]["username"].value;
         email = document.forms[0]["email"].value;
         password = document.forms[0]["password"].value;
-        window.auth.register(username, email, password, undefined);
+        window.auth.register(username, email, password, function() {});
         return true;
     } else {
         return false;
