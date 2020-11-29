@@ -14,14 +14,14 @@ document.forms[0].addEventListener("submit", function(event) {
 function validateRegister() {
     var e = document.getElementById("errors");
     e.innerHTML = "";
-    var emailValid = true;
-    var passwordValid = true;
+    var emailValid = validateEmail();
+    var passwordValid = validatePassword();
     if (emailValid && passwordValid) {
-        alert("Success!");
-        //username = document.forms[0]["username"].value;
-        //email = document.forms[0]["email"].value;
-        //password = document.forms[0]["password"].value;
-        //() register(username, email, password, undefined);
+        alert("Success");
+        username = document.forms[0]["username"].value;
+        email = document.forms[0]["email"].value;
+        password = document.forms[0]["password"].value;
+        //register(username, email, password, undefined);
         return true;
     } else {
         return false;
