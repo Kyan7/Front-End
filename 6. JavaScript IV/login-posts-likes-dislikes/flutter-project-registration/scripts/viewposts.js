@@ -95,10 +95,20 @@
     tweetsDB.on('child_changed', data => {
         var val = data.val();
         console.log(data.val());
+        var userId = val.userId;
         var username = val.username;
-        var currentUsername = firebase.auth().currentUser.displayName;
-        if (username == currentUsername) {
-            let userId = firebase.auth().currentUser.uid;
+        var message = val.message;
+        var currentUserId = firebase.auth().currentUser.uid;
+        var posts = document.getElementsByClassName("post-content");
+        for (var i = 0; i < posts.length; i++) {
+            var author = posts[i].firstElementChild.firstElementChild.innerHTML;
+            var text = posts[i].children[1].innerHTML;
+            if (author == username && text == message) {
+                posts[i].children[2].firstElementChild.lastElementChild.innerHTML = val.likes;
+                posts[i].children[2].lastElementChild.lastElementChild.innerHTML = val.dislikes;
+            }
+        }
+        if (userId == currentUserId) {
             this.auth.getUserStats(userId).once('value', (data) => {
                 let val = data.val();
                 var tweets = document.getElementById("profile-posts-count");
