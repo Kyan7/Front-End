@@ -16,12 +16,16 @@ function validateRegister() {
     e.innerHTML = "";
     var emailValid = validateEmail();
     var passwordValid = validatePassword();
-    if (emailValid && passwordValid) {
+    if (true) {
         alert("Success");
         username = document.forms[0]["username"].value;
         email = document.forms[0]["email"].value;
         password = document.forms[0]["password"].value;
-        window.auth.register(username, email, password, function() {});
+        var backendSuccess = true;
+        window.auth.register(username, email, password, function(successful, errorCode, errorMessage) {
+            backendSuccess = false;
+        });
+        alert(backendSuccess);
         return true;
     } else {
         return false;
