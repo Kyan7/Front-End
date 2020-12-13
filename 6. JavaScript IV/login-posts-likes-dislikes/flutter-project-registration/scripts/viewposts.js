@@ -94,7 +94,6 @@
 
     tweetsDB.on('child_changed', data => {
         var val = data.val();
-        console.log(data.val());
         var userId = val.userId;
         var username = val.username;
         var message = val.message;
