@@ -1,0 +1,1 @@
+Домашно 2 е в Hackerrank на адрес https://www.hackerrank.com/contests/front-end-web-2020/challenges
